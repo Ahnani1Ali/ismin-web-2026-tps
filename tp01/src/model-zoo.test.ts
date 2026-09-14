@@ -4,7 +4,7 @@ import { ModelZoo } from "./model-zoo.js";
 
 /**
  * These tests are the assignment: they describe the expected behaviour.
- * Do not modify them — make them pass.
+ * Do not modify them: make them pass.
  *
  * Run `npm run test:watch` and work through them one by one, top to bottom.
  */

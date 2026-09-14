@@ -1,14 +1,14 @@
-# TP1 — Introduction to TypeScript
+# TP1: Introduction to TypeScript
 
-*Web Development — ISMIN 3A, session 1.*
+*Web Development, ISMIN 3A, session 1.*
 
 ## 🎯 Goal
 
-Discover TypeScript and its ecosystem by implementing **ModelZoo**, a catalogue of AI models — the thread you will keep growing over the next four weeks, until you deploy it to production.
+Discover TypeScript and its ecosystem by implementing **ModelZoo**, a catalogue of AI models, the thread you will keep growing over the next four weeks, until you deploy it to production.
 
 By the end of this lab you will be able to declare types, implement a class, and make a test suite pass.
 
-## 🔀 Step 1 — Git
+## 🔀 Step 1: Git
 
 You work on **your own fork** of the course repository.
 
@@ -33,9 +33,9 @@ git switch -c tp01-modelzoo
 git push -u origin tp01-modelzoo
 ```
 
-Pushing works even before your first commit: it creates the branch on your fork, so your work has somewhere to go at the end of the lab. Later, on the final project, you will work in pairs and propose your changes through **pull requests** — that is when code review starts to mean something.
+Pushing works even before your first commit: it creates the branch on your fork, so your work has somewhere to go at the end of the lab. Later, on the final project, you will work in pairs and propose your changes through **pull requests**: that is when code review starts to mean something.
 
-## 🚀 Step 2 — Get started
+## 🚀 Step 2: Get started
 
 ```sh
 cd tp01
@@ -44,7 +44,7 @@ npm install
 # Run the tests once
 npm run test
 
-# Re-run the tests on every save — keep this terminal open
+# Re-run the tests on every save, keep this terminal open
 npm run test:watch
 ```
 
@@ -52,7 +52,7 @@ The test run does not even *start*: `src/model-zoo.test.ts` imports two files
 that do not exist yet.
 
 ```
-Failed to load url ./model-zoo.js — does the file exist?
+Failed to load url ./model-zoo.js (…). Does the file exist?
 ```
 
 That is the whole assignment. `npm run typecheck` shows both files at once:
@@ -62,7 +62,7 @@ error TS2307: Cannot find module './model.js'
 error TS2307: Cannot find module './model-zoo.js'
 ```
 
-## 📝 Step 3 — Write the types
+## 📝 Step 3: Write the types
 
 `src/` contains **one file**: the tests. They are the specification, and they are
 detailed enough to tell you everything the code must look like. Read them first,
@@ -70,13 +70,13 @@ end to end, before writing a line.
 
 Create `src/model.ts` and declare two types in it:
 
-- **`Task`** — what a model is able to do. Exactly four possibilities, no more:
+- **`Task`**: what a model is able to do. Exactly four possibilities, no more:
   `text-generation`, `translation`, `image-classification`, `speech-to-text`.
   Not an `enum`, not a `string`: a **union of string literals**. Once it is
   written, typing `"text-gen"` somewhere must be a *compile* error, caught before
   any test runs.
 
-- **`Model`** — a model in the catalogue. The test file builds three of them at
+- **`Model`**: a model in the catalogue. The test file builds three of them at
   the top: every field you need is there, their values tell you the types, and
   the comments tell you the units. Read all three: they do not carry exactly the
   same fields, and the type must accept every one of them. `id` is a URL-safe
@@ -97,7 +97,7 @@ git add src/model.ts
 git commit -m "feat(tp01): add Model and Task types"
 ```
 
-## 📝 Step 4 — Implement the class
+## 📝 Step 4: Implement the class
 
 Create `src/model-zoo.ts` and export a `ModelZoo` class fulfilling this contract:
 
@@ -114,7 +114,7 @@ class ModelZoo {
 
 Your first real decision: **how do you store the models inside the class?**
 An array? A `Map` keyed by `id`? Both make the tests pass, but one makes
-`getModel` a direct lookup and the other a scan. Choose deliberately — you
+`getModel` a direct lookup and the other a scan. Choose deliberately: you
 will be asked to justify it. Whatever you pick, declare it `private readonly`:
 nobody outside the class has any business touching it.
 
@@ -123,7 +123,7 @@ needs three trivial methods; after that, each `describe` block maps to one
 method. Make a block pass, then move on. Do not try to write the whole class at
 once.
 
-> 💡 The compiler is your first reviewer. Run `npm run typecheck` regularly — it
+> 💡 The compiler is your first reviewer. Run `npm run typecheck` regularly: it
 > catches things the tests do not.
 
 When the eleven tests are green, commit again:
@@ -135,7 +135,7 @@ git commit -m "feat(tp01): implement ModelZoo"
 
 ## 🤖 Using AI during this lab
 
-You may use an AI assistant, [Le Chat](https://chat.mistral.ai) or any other — and you are encouraged to, in order to **understand**, not to produce.
+You may use an AI assistant, [Le Chat](https://chat.mistral.ai) or any other, and you are encouraged to, in order to **understand**, not to produce.
 
 Today's exercise: when the TypeScript compiler returns an error you do not understand, ask it to explain, **then verify its answer** against the [official documentation](https://www.typescriptlang.org/docs/). You will be surprised how often a plausible explanation turns out to be wrong.
 
@@ -146,13 +146,13 @@ Today's exercise: when the TypeScript compiler returns an error you do not under
 If you finish early. Write the test before the implementation, in a new file
 (`src/extras.test.ts`, for instance): the given test file stays untouched.
 
-**Warm-up** — three more methods, each with a constraint:
+**Warm-up**: three more methods, each with a constraint:
 
-- `getTotalDownloads()` — the sum of every model's downloads. A single `reduce`, no loop.
-- `getModelNamesByTask(task)` — the *names* of the models able to perform a task. One chain, `filter` then `map`, no intermediate variable.
-- `getOrganisations()` — every organisation present in the catalogue, **each one once**. No loop either.
+- `getTotalDownloads()`: the sum of every model's downloads. A single `reduce`, no loop.
+- `getModelNamesByTask(task)`: the *names* of the models able to perform a task. One chain, `filter` then `map`, no intermediate variable.
+- `getOrganisations()`: every organisation present in the catalogue, **each one once**. No loop either.
 
-**Then** — none of these has an obvious solution:
+**Then**: none of these has an obvious solution:
 
 1. **The typed URL.** Write `huggingFaceUrl(model)`, returning the address of the model's page.
    Constraint: its **return type** must make it impossible to return `"https://example.com"`.

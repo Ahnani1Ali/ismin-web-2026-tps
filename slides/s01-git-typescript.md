@@ -32,32 +32,6 @@ mdc: true
 <b class="text-base">gaetanmaisse.github.io/ismin-web-2026-tps</b>
 </div>
 
-<!--
-⏱ MINUTAGE PRÉVU (minutes depuis le début)
-  +00  Accroche : Hugging Face en direct
-  +03  Qui je suis (1 min), puis sondage « et vous ? » (3 min)
-  +07  ▶ Terminal ouvert : on vérifie les machines
-  +12  Cadrage : les 4 semaines et la règle d'or
-  +25  Git : le modèle (photo, pointeur, 4 espaces), la pratique, la démo
-  +43  TP Git (fork, clone, branche, premier push)
-  +68  CM TypeScript
-  +88  PAUSE (15 min)
-  +103 CM boîte à outils (dont les méthodes de tableau)
-  +118 TP ModelZoo (types PUIS classe)
-  +152 Commit et push : leur travail est sauvegardé
-  +155 Correction : comparer les approches
-  +165 Fin
-
-⚠️ SI VOUS ÊTES EN RETARD, coupez dans cet ordre :
-  1. « Deux conséquences qui surprennent »
-  2. « Le raccourci de constructeur »
-  3. « `.some()` et `.every()` : répondre par oui ou non »
-Ne coupez JAMAIS le TP ModelZoo.
-
-Relevé automatique : Ctrl+Shift+R pour remettre à zéro MAINTENANT,
-Ctrl+Shift+T en fin de séance pour télécharger le CSV.
--->
-
 ---
 layout: center
 class: text-center
@@ -90,25 +64,6 @@ Plus de <b>3 millions de modèles</b>, partagés par <b>18 millions de développ
 </div>
 
 </v-click>
-
-<!--
-🔴 NE PAS RESTER SUR LA SLIDE : ouvrir huggingface.co au vidéoprojecteur.
-Montrer la liste, un filtre par tâche, la fiche d'un modèle (Mistral-7B).
-« Qui a déjà téléchargé un modèle là-dessus ? »
-
-L'actu tombe à pic : elle a onze jours, ils l'ont vue passer. Deux usages :
-
-1. Ça donne du poids au fil rouge : « le catalogue qu'on va construire
-   cet après-midi, Nvidia vient de l'acheter 13 milliards ».
-
-2. Ça amorce la souveraineté sans faire la leçon : le dépôt central des
-   modèles ouverts passe sous le contrôle du fabricant de puces qui domine
-   le marché. Une question à leur poser, pas une réponse à leur donner,
-   et ça éclaire pourquoi ce cours s'outille chez Mistral.
-
-Ne pas s'étendre : 2 minutes pour toute la slide.
-⚠️ Dire « annoncé », pas « racheté » : l'opération n'est pas encore conclue.
--->
 
 ---
 layout: two-cols
@@ -158,18 +113,6 @@ GitHub · LinkedIn<br/>
 
 </div>
 
-<!--
-1 minute, pas plus. Trois points qui portent devant eux :
-
-- « j'étais assis où vous êtes » : vous n'êtes pas un prof d'université
-- Storybook : de l'open source qu'ils croiseront vraiment, ça donne du
-  poids à ce que vous direz sur les conventions de code et les PR
-- « le cours change tous les ans » : vous êtes un praticien, pas un
-  support figé
-
-La dernière ligne est là pour vous rendre abordable, pas pour meubler.
--->
-
 ---
 layout: center
 ---
@@ -198,19 +141,6 @@ Aucune de ces réponses n’est un prérequis. <b>Le cours part de zéro sur le 
 
 </v-click>
 
-<!--
-Sondage à main levée, 3 minutes, mais À FAIRE : ça calibre tout le reste
-et ça dédramatise pour ceux qui n'ont jamais touché au web.
-
-Poser les questions UNE PAR UNE et compter à voix haute. Le silence
-après une question est une information, pas un échec.
-
-⚠️ La dernière question n'est pas décorative : elle DÉCIDE de l'outillage IA
-du sprint 2. Si une majorité a déjà Copilot, inutile d'imposer Continue.dev.
-Noter les chiffres dans le RETEX, et annoncer à voix haute ce qu'on en fait :
-« personne n'a fait de React, on prendra le temps en semaine 2 ».
--->
-
 ---
 layout: center
 ---
@@ -237,15 +167,6 @@ git --version
 <div class="pt-8 text-sm op-75">
 On règle ça pendant que je parle du programme, pas à 15 h quand il faudra coder.
 </div>
-
-<!--
-⏱ +5. Moment clé : ils ouvrent leur machine dans les 5 premières minutes.
-Deux bénéfices : la séance devient physique tout de suite, et vous
-identifiez les machines cassées AVANT le TP.
-
-Repérer les mains levées, y aller pendant les slides suivantes.
-Compter combien : ça va dans le RETEX.
--->
 
 ---
 
@@ -281,6 +202,43 @@ Compter combien : ça va dans le RETEX.
 <div class="mt-4 p-4 rounded border-l-4 border-blue-500 bg-blue-500 bg-opacity-5">
 <b>À 16 h 30 aujourd’hui</b>, vous aurez un dépôt Git à votre nom avec une branche poussée,
 et une classe TypeScript qui fait passer onze tests.
+</div>
+
+</v-click>
+
+---
+
+# Les TP démarrent en randori
+
+<div class="text-sm op-75 mb-4">
+Un kata à plusieurs, emprunté aux dojos de code&nbsp;: un seul clavier, et toute la salle qui réfléchit.
+</div>
+
+<div class="grid grid-cols-2 gap-8">
+<div>
+
+### Au vidéoprojecteur
+
+- **Un pilote** au clavier&nbsp;: il tape, il ne décide pas
+- **Un copilote** à côté&nbsp;: il pense à voix haute, il dicte
+- Toutes les **cinq minutes**, on tourne&nbsp;: le copilote devient pilote, un nouveau copilote arrive
+
+</div>
+<div>
+
+### Dans la salle
+
+- On regarde, on prend des notes, on **se tait**
+- On parle quand le binôme sèche, pas avant
+- Moi, je n’ai pas de clavier&nbsp;: je pose des questions
+
+</div>
+</div>
+
+<v-click>
+
+<div class="mt-8 p-4 rounded border-l-4 border-blue-500 bg-blue-500 bg-opacity-5">
+Dix minutes ensemble pour lancer chaque TP, puis chacun continue sur sa machine, en repartant de ce qu’on a écrit à l’écran.
 </div>
 
 </v-click>
@@ -323,11 +281,6 @@ layout: center
 Chaque semaine se termine par une <b>revue</b>&nbsp;: on montre ce qui tourne.
 </div>
 
-<!--
-Insister sur la continuité : ce n'est pas 12 exercices indépendants,
-c'est UNE application qu'on fait grandir.
--->
-
 ---
 
 # L’IA dans ce cours
@@ -364,17 +317,6 @@ Ce n’est pas une menace, c’est le métier&nbsp;: en entreprise, c’est vous
 </div>
 
 </v-click>
-
-<!--
-Moment important. Le dire calmement mais clairement, et surtout :
-LE FAIRE DÈS LE PREMIER TP, sinon la règle ne vaut rien.
-
-Ne citer aucun assistant en particulier ici : le sondage d'ouverture
-vous a dit ce qu'ils ont, et l'outillage du sprint 2 en découlera.
-
-L'IA écrit vite du code plausible ET faux : on en verra des exemples
-toute la semaine.
--->
 
 ---
 layout: section
@@ -419,14 +361,6 @@ flowchart LR
 <b>Dès demain</b>&nbsp;: une commande de plus pour récupérer le TP du jour depuis mon dépôt.
 </div>
 
-<!--
-Ne PAS faire configurer upstream aujourd'hui : ils n'en ont pas besoin
-avant demain matin, et la journée est déjà chargée. On l'ajoute en
-ouverture de la séance 2, au moment où ça leur sert vraiment.
-
-Le schéma le montre en pointillés pour qu'ils sachent que ça arrive.
--->
-
 ---
 
 # Un commit est une photo, pas une différence
@@ -455,11 +389,6 @@ C’est ce qui rend le changement de branche instantané&nbsp;: Git ne rejoue ri
 </div>
 
 </v-click>
-
-<!--
-LA slide qui fait comprendre Git. 2 minutes.
-Insister : photo, pas diff. Tout le reste en découle.
--->
 
 ---
 
@@ -528,21 +457,6 @@ flowchart LR
 
 </div>
 
-<!--
-Slide sans texte : c'est le schéma qu'on commente, pas qu'on lit.
-
-LA phrase à dire, celle qui les surprend : « commiter n'envoie rien à
-personne ». Votre historique reste local tant que vous ne poussez pas.
-Ils viennent de Git vu comme une sauvegarde en ligne, c'est le
-contresens à casser tout de suite.
-
-Parcourir le cycle à voix haute en pointant : j'édite, j'ajoute au
-staging, je commite, je pousse. Puis la flèche du retour, git pull.
-
-Le staging est l'espace qui n'existe nulle part ailleurs : insister
-sur « ce qui ira dans le commit », pas « ce que j'ai modifié ».
--->
-
 ---
 
 # Les branches
@@ -575,14 +489,6 @@ En équipe, cette fusion se demande par une <b>pull request</b>, et c’est là 
 </div>
 
 </v-click>
-
-<!--
-Cette semaine ils sont seuls sur leur fork : une PR à soi-même serait
-du théâtre. On garde le CONCEPT en une phrase, et l'exercice attend
-d'avoir un vrai relecteur, sur le projet.
-
-Le réflexe utile en solo, c'est `git diff` avant de commiter.
--->
 
 ---
 
@@ -712,13 +618,6 @@ Bonne nouvelle&nbsp;: tant que vous avez <b>commité</b>, presque rien n’est i
 
 </v-click>
 
-<!--
-Slide de survie. La plus utile du bloc en pratique : c'est ce qui
-transforme un blocage de 10 minutes en 10 secondes.
-
-Leur dire de la garder ouverte pendant le TP.
--->
-
 ---
 layout: center
 ---
@@ -745,24 +644,6 @@ git push
 
 </div>
 
-<!--
-🔴 DÉMONSTRATION EN DIRECT, pas une slide qu'on lit.
-
-Faire les 4 étapes au vidéoprojecteur, en commentant. Ils regardent,
-ils ne tapent pas encore : ils referont tout seuls juste après.
-
-Le push de l'étape 3 marche sans aucun commit : il crée la branche sur
-le fork. Du coup le push final de l'étape 4 n'a plus besoin d'option,
-et les problèmes d'authentification GitHub sortent MAINTENANT, pas à 16 h 30.
-
-Git se REGARDE, il ne se lit pas. 6 minutes suffisent.
-Taper `git status` entre CHAQUE étape, sans commenter : c'est le
-réflexe qu'on installe par répétition, pas par explication.
-
-Le modèle mental est posé, cette démo le met en mouvement. Enchaîner
-directement sur le TP : ils refont exactement ça, seuls.
--->
-
 ---
 layout: section
 ---
@@ -784,18 +665,6 @@ layout: section
 <div class="pt-8 text-sm op-75">
 🖐 Bloqué&nbsp;? Levez la main.
 </div>
-
-<!--
-⏱ On doit être à +43. Si on déborde ici, c'est le CM boîte à outils
-(après la pause) qu'on raccourcit, pas le TP ModelZoo.
-
-L'étape 4 est le filet : à 16 h 30, même ceux qui n'auront pas fini ont une
-branche sur leur fork, et l'authentification GitHub est réglée tôt.
-
-Circuler. Les blocages classiques : Git non configuré (user.name/user.email),
-authentification GitHub (token vs mot de passe), et ceux qui clonent
-MON dépôt au lieu de leur fork.
--->
 
 ---
 layout: section
@@ -843,7 +712,6 @@ layout: section
 
 # Les mauvais côtés de JavaScript
 
-
 <div class="grid grid-cols-2 gap-x-6 text-sm">
 <div>
 
@@ -886,21 +754,6 @@ Et la faute de frappe sur `paramaters` donne `NaN`, **sans la moindre erreur**.
 
 </v-click>
 
-<!--
-🔴 NE PAS COMMENTER LA SLIDE : les faire deviner. 3 minutes.
-
-Les blocs sont exécutables ici même et ne partent PAS tout seuls :
-on demande le résultat à voix haute, puis on clique. Le silence entre
-la question et le clic est ce qui fait le travail.
-
-Leur dire quand même d'ouvrir leur console (clic droit → Inspecter) :
-ils repartent en sachant qu'elle existe, ça leur sert tout le semestre.
-
-Le dernier bloc est le plus important : la faute de frappe donne NaN
-sans la moindre erreur. C'est l'argument pour TypeScript, et il arrive
-juste avant la slide qui l'annonce.
--->
-
 ---
 
 # Ce qu’on vient de voir
@@ -929,15 +782,6 @@ Le triple égal compare sans convertir. `"" === 0` vaut `false`, comme il se doi
 </div>
 
 </v-clicks>
-
-<!-- 🖼 Emplacement meme « this is weird » : <img src="/medias/xxx.gif" class="rounded-lg mx-auto pt-4" /> -->
-
-<!--
-Le 1 < 3 < 2 leur parle : le même piège existe en C++ (bool comparé à int).
-Le `paramaters` mal orthographié est LE bug que tout le monde a écrit.
-Historiquement : JS a été conçu en 10 jours en 1995 pour animer des pages,
-puis on lui a demandé de porter des applications de millions de lignes.
--->
 
 ---
 
@@ -1027,12 +871,6 @@ interface Dataset {
 
 </v-clicks>
 
-<!--
-Slide de vocabulaire, 1 minute : elle sert uniquement à ce que les trois
-slides suivantes se lisent. Le renversement « type après le nom » est ce
-qui bloque un public C++ ; le dire une fois ici évite de le redire trois fois.
--->
-
 ---
 layout: two-cols
 layoutClass: gap-4
@@ -1086,17 +924,7 @@ Un objet **est** d’un type parce qu’il en a la **forme**.
 🦆 <b>Duck typing</b>&nbsp;: « if it looks like a duck and quacks like a duck, it’s a duck »
 </div>
 
-<!-- 🖼 Emplacement du canard 2025 : <img src="/medias/xxx.gif" class="rounded-lg pt-2" /> -->
-
 </div>
-
-<!--
-LE changement de modèle mental pour un public C++.
-Le compilateur ne demande pas « de quel type te déclares-tu ? »
-mais « as-tu ce qu'il faut ? ».
-
-Corollaire utile : pas besoin de déclarer qu'on implémente une interface.
--->
 
 ---
 
@@ -1148,11 +976,6 @@ Il faudra la valider à l’exécution. On verra comment dès demain.
 
 </v-click>
 
-<!--
-Slide clé. Un dev C++ s'attend à ce que les types soient « réels ».
-Ça évite le contresens classique et ça amorce class-validator en séance 2.
--->
-
 ---
 
 # Deux conséquences qui surprennent
@@ -1194,11 +1017,6 @@ Ces deux points font de TypeScript un outil qu’on peut adopter progressivement
 </div>
 
 </v-click>
-
-<!--
-Point pratique : ils vont voir des erreurs rouges dans le terminal ET un
-fichier .js généré. Sans cette slide, ils croient que rien n'a été produit.
--->
 
 ---
 
@@ -1257,11 +1075,6 @@ layout: section
 
 <div class="op-75 pt-2">Ce dont vous aurez besoin dans 10 minutes</div>
 
-<!--
-⏱ On reprend ici après la pause. On doit être à +103.
-Noter l'écart réel dans le RETEX.
--->
-
 ---
 
 # Le piège de `var`
@@ -1298,11 +1111,6 @@ La portée de `var` est la **fonction**, pas le bloc.  Le second `x` n’est pas
 </div>
 
 </v-click>
-
-<!--
-Faire voter la salle AVANT de cliquer. Ça réveille, et le C++ leur fait
-attendre une portée de bloc : la surprise est garantie.
--->
 
 ---
 
@@ -1451,12 +1259,6 @@ Dans <code>(d) => …</code>, le paramètre n’a pas de type écrit&nbsp;: Type
 </div>
 
 </v-click>
-
-<!--
-Les fléchées sont indispensables : chaque méthode de tableau en prend une,
-et le fichier de test en est rempli. Insister sur le paramètre sans type :
-un public C++ s'attend à devoir l'écrire.
--->
 
 ---
 
@@ -1633,12 +1435,6 @@ Vous le retrouverez partout dès demain&nbsp;: c’est ainsi que NestJS reçoit 
 
 </v-click>
 
-<!--
-Sucre syntaxique spécifique à TypeScript (ça n'existe pas en JS).
-Ils vont le voir dans TOUS les services NestJS en séance 2, autant
-qu'ils le reconnaissent.
--->
-
 ---
 
 # Les méthodes de tableau
@@ -1657,14 +1453,6 @@ En JavaScript, on ne parcourt pas un tableau avec une boucle `for`&nbsp;: **on e
 Chacune prend une <b>lambda</b> en paramètre et l’applique à chaque élément. Aucune ne modifie le tableau d’origine&nbsp;:
 elles <b>renvoient un nouvel objet&nbsp;:</b> tableau, booléen ou chaîne selon la méthode.
 </div>
-
-<!--
-🔴 Section essentielle pour un public C/C++ : leur réflexe sera la boucle for.
-Ils ont besoin de filter dans 10 minutes pour getModelsOf et getModelsByTask.
-
-Rythme rapide : une slide par méthode, 30 à 45 secondes chacune.
-La slide « les enchaîner » est celle qui compte le plus.
--->
 
 ---
 
@@ -1798,13 +1586,6 @@ La même chose en boucle `for` prendrait dix lignes et une variable temporaire.
 
 </v-click>
 
-<!--
-🔴 LA slide de la section. Dérouler le surlignage étape par étape,
-en lisant à voix haute la phrase à chaque fois.
-
-C'est là que le style fonctionnel prend son sens pour eux.
--->
-
 ---
 
 # `.reduce()`&nbsp;: tout replier en une seule valeur
@@ -1897,12 +1678,6 @@ console.log(datasets.find((d) => d.downloads > 4000000)?.name);
 <code>.find()</code> est le cousin de <code>.filter()</code>&nbsp;: il renvoie <b>le premier</b> élément trouvé, ou <code>undefined</code>. D’où le <code>?.</code>&nbsp;: on ne lit <code>.name</code> que s’il a trouvé quelque chose.
 </div>
 
-<!--
-2 minutes. Leur faire proposer une transformation à voix haute et la
-taper en direct. Le « ?. » après find mérite une phrase : find peut
-ne rien trouver.
--->
-
 ---
 
 # Modules&nbsp;: un fichier, un module
@@ -1941,12 +1716,6 @@ export class DatasetCatalog { … }
 
 </v-click>
 
-<!--
-Les modules sont indispensables : le TP les utilise dès la première ligne,
-et la slide suivante montre le fichier de test qui les importe.
-L'extension .js dans un import TS est LA question qui revient toujours.
--->
-
 ---
 
 # Lire un test&nbsp;: parce que c’est votre énoncé
@@ -1982,11 +1751,6 @@ Les assertions les plus fréquentes&nbsp;: `toBe` (égalité stricte), `toEqual`
 </div>
 
 </v-click>
-
-<!--
-Slide indispensable : on leur donne 11 tests comme énoncé, encore
-faut-il qu'ils sachent les lire. On approfondira en séance 9.
--->
 
 ---
 layout: section
@@ -2034,28 +1798,6 @@ Tout ce qu’il vous faut est **dans les tests**. Lisez-les en entier avant d’
 
 </div>
 
-<!--
-⏱ On doit être à +118.
-
-Rien n'est fourni à part les tests : c'est volontaire, et c'est l'exercice.
-Lire une spec et en déduire les types, c'est exactement le travail de la
-séance 2 avec les tests e2e.
-
-NE PAS écrire Model ni Task au tableau : les slides du cours ne les
-montrent jamais, exprès, elles travaillent sur des datasets. Tout est à
-transposer, rien à coller. Les laisser déduire les champs exacts des
-fixtures du test : c'est là que la séance se joue. Le README rappelle
-les 4 valeurs de Task (les tests n'en utilisent que 3) et le contrat des
-6 méthodes, pour ceux qui calent.
-
-Circuler beaucoup pendant les 10 premières minutes. Le blocage typique :
-ils écrivent `task: string` au lieu d'une union. Ne pas corriger tout de
-suite, demander « et si j'écris "text-gen" ? ».
-
-Le test « remplace un modèle déjà présent » départage tableau et Map.
-Ne pas donner la réponse non plus.
--->
-
 ---
 
 # L’exercice IA du jour
@@ -2092,11 +1834,6 @@ Quand le compilateur vous renvoie une erreur que vous ne comprenez pas&nbsp;:
 Vous n’avez pas tous le même assistant&nbsp;? <b>Tant mieux.</b> Posez-lui la même question qu’à votre voisin et comparez.<br/>
 On en reparle en fin de séance&nbsp;: <b>qui a pris son IA en flagrant délit d’erreur&nbsp;?</b>
 </div>
-
-<!--
-C'est le premier pas de la progression : cette semaine on fait EXPLIQUER,
-on ne fait pas GÉNÉRER. Ramasser les cas intéressants pour le RETEX.
--->
 
 ---
 
@@ -2140,24 +1877,6 @@ Que devez-vous **exiger** de `T` pour que `getModel` fonctionne encore&nbsp;?
 
 </v-clicks>
 
-<!--
-Ces extras servent à occuper ceux qui ont fini, pas à être bouclés.
-Aucune ne donne sa réponse : elles posent un objectif et une contrainte
-vérifiable.
-
-Repères si quelqu'un cale :
-  0. échauffement : reduce avec 0 au départ, getModelsByTask puis map,
-     un Set pour les doublons
-  1. les template literal types savent décrire une forme de chaîne
-  2. deux failles possibles, selon leur implémentation : soit getAllModels
-     renvoie la structure interne elle-même, soit il en renvoie une copie
-     mais les OBJETS restent partagés (zoo.getAllModels()[0].downloads = -1).
-     La seconde est la plus intéressante, et la plus dure à voir.
-  3. reduce, avec une Map comme accumulateur : le second exemple de la slide reduce
-  4. une contrainte de type générique — c'est la marche la plus haute,
-     personne n'est censé la finir en séance
--->
-
 ---
 layout: center
 class: text-center
@@ -2185,16 +1904,6 @@ Avant de commiter, **relisez votre diff**&nbsp;: <code>git diff</code>.
 <div class="pt-8 text-sm op-75">
 Relire son propre code avant de l’enregistrer&nbsp;: le réflexe qui vous distinguera.
 </div>
-
-<!--
-🔴 Faire commiter et pousser AVANT de lancer la correction : leur travail
-est sauvegardé, et ceux qui montreront leur code au vidéoprojecteur
-pourront le faire depuis leur dépôt.
-
-2 minutes, circuler pour vérifier que les push passent.
-Erreur « no upstream branch » : ils ont sauté l'étape 4 du TP Git,
-git push -u origin tp01-modelzoo règle ça.
--->
 
 ---
 
@@ -2242,14 +1951,6 @@ chercher puis remplacer à la main&nbsp;; avec une `Map`, `set` écrase la clé 
 
 </v-click>
 
-<!--
-🔴 NE PAS DONNER LA SOLUTION : faire venir 2 ou 3 étudiants montrer LEUR addModel.
-Les comparer devant tout le monde. Ils repartent avec une décision de conception,
-pas avec une correction recopiée.
-
-Demander aussi : « qui a pris son IA en flagrant délit ? » : récolter pour le RETEX.
--->
-
 ---
 layout: center
 class: text-center
@@ -2285,14 +1986,3 @@ et pourquoi il faut valider tout ce qui vient de l’extérieur.
 Slides&nbsp;: gaetanmaisse.github.io/ismin-web-2026-tps<br/>
 TPs&nbsp;: github.com/gaetanmaisse/ismin-web-2026-tps
 </div>
-
-<!--
-🔴 Si l'API de démonstration tourne sur votre machine : basculer sur le
-navigateur et montrer la vraie réponse JSON, 10 secondes. Un cliffhanger
-coûte 30 secondes et se rentabilise le lendemain.
-
-⏱ Fin prévue à +165. AVANT DE PARTIR :
-  1. Ctrl+Shift+T → télécharger le CSV de minutage
-  2. Remplir docs/RETEX-seance-01.md dans la demi-heure
-  3. ./publier-tp.sh corrige 01 && ./publier-tp.sh sujet 02
--->

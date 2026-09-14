@@ -19,7 +19,6 @@ transition: slide-left
 mdc: true
 ---
 
-
 <CourseCover :sprint="1" :seance="2" />
 
 # NestJS
@@ -31,35 +30,6 @@ mdc: true
 <div class="pt-10 text-sm op-75">
 📱 <b>gaetanmaisse.github.io/ismin-web-2026-tps</b>
 </div>
-
-<!--
-⏱ MINUTAGE PRÉVU (minutes depuis le début)
-  +00  Reprise : ça ne vit que dans votre terminal
-  +03  Le web : JSON, puis REST
-  +13  REST : verbes et codes de statut
-  +23  Node & npm
-  +31  ▶ MAINS SUR LE CLAVIER : upstream, récupérer le TP, installer, démarrer
-  +38  Nest : pourquoi, et ce que génère la CLI
-  +46  L'architecture, brique par brique
-  +66  TP partie 1 : GET /models
-  +90  PAUSE (15 min)
-  +105 Asynchronisme : service synchrone → asynchrone, promesses
-  +122 Cycle de vie
-  +130 Validation des entrées
-  +138 TP partie 2
-  +158 Correction
-  +165 Fin
-
-⚠️ SÉANCE DENSE EN CM : c'est la nature de la séance framework.
-SI EN RETARD, coupez dans cet ordre :
-  1. « Un projet Nest, fichier par fichier » (le README a le même arbre)
-  2. « 4xx, la faute du client. 5xx, la vôtre » (les cinq codes du TP sont dans le README)
-  3. « Un contrôleur, plusieurs routes »
-  4. Le bonus Hugging Face du TP
-Ne coupez JAMAIS : le module, main.ts, le cycle de vie, la validation.
-
-Ctrl+Shift+R pour remettre le relevé à zéro MAINTENANT.
--->
 
 ---
 layout: center
@@ -91,12 +61,6 @@ un navigateur, un téléphone, une autre application.
 </div>
 
 </v-click>
-
-<!--
-Reprendre le fil. 3 minutes. Rappeler que tp02 embarque le corrigé du
-TP1 comme base : ceux qui ont fini le remplacent par leurs fichiers,
-les autres le gardent. Personne n'est bloqué par le TP d'hier.
--->
 
 ---
 layout: section
@@ -207,11 +171,6 @@ Un `500` dans vos logs est toujours un bug à corriger. Un `4xx`, jamais.
 
 </div>
 </div>
-
-<!--
-Sacrifiable si retard : les cinq codes du TP sont dans le README.
-Le message qui compte est le 4xx/5xx.
--->
 
 ---
 layout: section
@@ -326,17 +285,6 @@ Mais le serveur, lui, <b>tourne</b>.
 </div>
 
 </v-click>
-
-<!--
-⏱ +31. Moment de respiration au milieu du CM, et vérification que
-le npm install passe pour tout le monde AVANT le TP.
-
-🔴 C'est ICI qu'on configure upstream, pas hier : ils en ont besoin
-maintenant, pour de vrai, et la notion s'ancre au moment où elle sert.
-Le faire au vidéoprojecteur, puis les laisser suivre.
-
-Circuler pendant l'installation. Repérer les mains levées.
--->
 
 ---
 layout: section
@@ -492,14 +440,6 @@ flowchart LR
   class DB db
   style M fill:#eff6ff,stroke:#2563eb,stroke-width:3px
 ```
-
-
-<!--
-🔴 Ce schéma revient en pleine page avant chaque pièce, celle du moment
-allumée, les autres grisées : six fois en tout, DTO compris en section 6.
-C'est le fil conducteur : ils doivent toujours savoir « où on est ».
-Trois secondes par transition, pas plus.
--->
 
 ---
 
@@ -993,14 +933,6 @@ Alternative sans rien installer&nbsp;: l’extension <b>REST Client</b> de VS Co
 </div>
 </div>
 
-<!--
-🔴 DÉMO EN DIRECT, 3 minutes : ouvrir Bruno, charger tp02/bruno,
-sélectionner l'environnement local, lancer « 01-list-models ».
-Montrer la réponse, le code de statut, le temps de réponse.
-
-Puis modifier le corps de « 02-create-model » et relancer.
--->
-
 ---
 layout: section
 ---
@@ -1021,26 +953,6 @@ layout: section
 <div class="pt-8 text-sm op-75">
 🖐 Bloqué&nbsp;? Levez la main.
 </div>
-
-<!--
-⏱ +66.
-
-Étape 0 : ceux qui n'ont pas fini le TP1 gardent les deux fichiers fournis,
-identiques au corrigé publié hier soir. Les autres écrasent avec les leurs.
-
-Amorçage en Randori (8 min) : lire le projet ensemble, câbler le module,
-poser le ModelZoo dans le service puis écrire clear, create et findAll,
-trois délégations, puis la route dans le contrôleur. Puis ils continuent
-seuls.
-
-Blocages classiques :
-- module pas câblé : la suite de tests ne démarre pas, « Nest could not
-  find ModelsService element » ; contrôleur déclaré sans son service :
-  « Nest can't resolve dependencies » ; contrôleur oublié : 404 muet
-- l'exception HTTP levée dans le service : c'est le contrôleur qui traduit
-
-⏱ Pause de 15 min à +90, annoncée à l'oral. Noter l'écart réel.
--->
 
 ---
 layout: section
@@ -1176,11 +1088,6 @@ try {
 ```
 ````
 
-<!--
-Magic-move : le code se transforme, les lignes communes glissent.
-C'est exactement la progression du bonus A du TP.
--->
-
 ---
 
 # `async` / `await` en pratique
@@ -1226,13 +1133,6 @@ getDataset().then((name) => console.log(name));
 console.log('après');
 ```
 
-<!--
-Faire voter AVANT d'exécuter. Réponse : avant / après / Mistral-7B.
-
-C'est LE moment de comprendre que `then` ne bloque pas. Modifier en
-direct pour tester leurs hypothèses.
--->
-
 ---
 layout: section
 ---
@@ -1268,11 +1168,6 @@ export class DatasetsService implements OnModuleInit {
 <div class="pt-3 text-sm op-75">
 Pourquoi pas dans le constructeur&nbsp;? Parce qu’un constructeur ne peut pas être <code>async</code>. <code>onModuleInit</code>, si, et Nest l’attend avant de démarrer le serveur.
 </div>
-
-<!--
-Indispensable : le bonus A du TP repose entièrement là-dessus.
-On s'en resservira en séance 3 pour la connexion à la base.
--->
 
 ---
 layout: section
@@ -1415,11 +1310,6 @@ layout: section
 Bonus&nbsp;: charger le catalogue au démarrage (<code>OnModuleInit</code>), puis depuis l’API de Hugging Face
 </div>
 
-<!--
-⏱ +138. C'est court : privilégier 4 et 5. Le 6 peut déborder
-sur la correction, et les bonus sur la maison.
--->
-
 ---
 
 # Correction&nbsp;: où avez-vous mis quoi&nbsp;?
@@ -1469,11 +1359,6 @@ Le contrôleur traduit, le service décide.
 
 </v-click>
 
-<!--
-🔴 Faire venir 2 étudiants montrer leur findAll. Comparer.
-Le critère n'est pas « ça marche » mais « où sera le changement demain ».
--->
-
 ---
 layout: center
 class: text-center
@@ -1495,16 +1380,6 @@ et un client typé de bout en bout.
 <div class="pt-10 text-sm op-60">
 Slides&nbsp;: gaetanmaisse.github.io/ismin-web-2026-tps
 </div>
-
-<!--
-🔴 Le faire pour de vrai : Ctrl+C sur le serveur, relancer,
-GET /models → vide. La frustration est le meilleur argument pour demain.
-
-⏱ AVANT DE PARTIR :
-  1. Ctrl+Shift+T → CSV de minutage
-  2. docs/RETEX-seance-02.md
-  3. ./publier-tp.sh corrige 02 && ./publier-tp.sh sujet 03
--->
 
 ---
 layout: section

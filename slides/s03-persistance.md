@@ -31,32 +31,6 @@ mdc: true
 📱 <b>gaetanmaisse.github.io/ismin-web-2026-tps</b>
 </div>
 
-<!--
-⏱ MINUTAGE PRÉVU (minutes depuis le début)
-  +00  Reprise : tout a disparu
-  +10  Stocker des données : les options
-  +22  Ce qu'est un ORM
-  +37  Prisma en pratique
-  +52  TP partie 1 : schéma, migration, service branché
-  +85  PAUSE (15 min)
-  +100 Relations et le piège du N+1
-  +115 TP partie 2 : relation, seed, N+1
-  +140 Correction
-  +145 Revue de fin de sprint, en binôme
-  +165 Fin
-
-⚠️ SI EN RETARD, coupez dans cet ordre :
-  1. « Les transactions »
-  2. « SQL, le minimum vital » (à sauter : ils ont un cours dédié)
-  3. Le bonus du TP
-Ne coupez JAMAIS le N+1 : c'est LE piège des ORM.
-
-🔴 C'est la séance de REVUE DE FIN DE SPRINT 1 : garder 20 min,
-huit binômes à deux minutes trente.
-
-Ctrl+Shift+R pour remettre le relevé à zéro MAINTENANT.
--->
-
 ---
 layout: center
 ---
@@ -88,11 +62,6 @@ Un redémarrage, une mise à jour, un plantage, et il ne reste rien.
 </div>
 
 </v-click>
-
-<!--
-🔴 Le faire pour de vrai au vidéoprojecteur. La frustration est
-le meilleur argument de la séance.
--->
 
 ---
 
@@ -163,16 +132,6 @@ DELETE FROM Dataset WHERE name = 'squad';
 <div class="pt-3 text-sm op-75">
 Une <b>table</b> = une classe. Une <b>ligne</b> = un objet. Une <b>colonne</b> = un attribut. La clé étrangère viendra avec les relations, après la pause.
 </div>
-
-<!--
-🔴 À SAUTER par défaut : la promo a un cours dédié aux bases de données.
-La garder en réserve uniquement si le sondage à main levée montre que
-SQL n'est pas encore passé chez eux.
-
-Notre sujet ici n'est pas SQL mais la CONNEXION à la base depuis une
-application : le schéma comme source de vérité, les migrations
-versionnées, le client typé, et le piège du N+1.
--->
 
 ---
 layout: section
@@ -266,11 +225,6 @@ new PrismaClient({ log: ['query'] })
 </div>
 
 </v-clicks>
-
-<!--
-Message central de la séance : un ORM n'exempte pas de comprendre
-ce qui se passe en dessous. On le démontre avec le N+1 après la pause.
--->
 
 ---
 layout: section
@@ -419,13 +373,6 @@ on remplace le stockage sans toucher aux routes.
 
 </v-click>
 
-<!--
-Si quelqu'un a croisé nestjs-prisma : ces quinze lignes existent en
-paquet, avec en plus un filtre qui traduit les erreurs Prisma en codes
-HTTP. Maintenant ils savent ce qu'il contient, et c'est le bon critère
-pour décider d'une dépendance. La doc officielle de Nest écrit ce
-service à la main, comme le TP : on reste sur la voie de référence.
--->
 ---
 layout: section
 ---
@@ -446,24 +393,6 @@ layout: section
 <div class="pt-8 text-sm op-75">
 🖐 Bloqué&nbsp;? Levez la main.
 </div>
-
-<!--
-⏱ +52.
-
-Amorçage en Randori : écrire le schéma ensemble, lancer la première
-migration au vidéoprojecteur, ouvrir prisma studio pour montrer la
-table vide. 10 minutes.
-
-Blocages classiques :
-- oublier DATABASE_URL dans .env → message d'erreur clair, les laisser lire
-- findUnique renvoie null, pas undefined → le service doit s'adapter,
-  et license nullable aussi : null en base, undefined dans le domaine
-- oublier `await` → une Promise qui part en JSON
-- avant l'étape 3, rien ne compile : prisma.model n'existe pas encore,
-  c'est normal, le leur dire avant qu'ils cherchent
-
-⏱ Pause de 15 min à +85, annoncée à l'oral. Noter l'écart réel.
--->
 
 ---
 layout: section
@@ -586,14 +515,6 @@ const datasets = await prisma.dataset.findMany({ include: { org: true } });
 
 </v-click>
 
-<!--
-🔴 NE JAMAIS COUPER cette slide. C'est LE piège des ORM, celui qui
-met des applications à genoux en production.
-
-Le démontrer en direct : activer log: ["query"] et montrer les 18 lignes
-défiler dans le terminal, puis les 2 avec include. Ça se voit.
--->
-
 ---
 
 # Les transactions&nbsp;: tout ou rien
@@ -620,11 +541,6 @@ Si la seconde échoue, la première est **annulée**. Sans transaction, vous aur
 
 </v-click>
 
-<!--
-Sacrifiable si retard. Le concept suffit, ils n'en ont pas besoin
-pour le TP.
--->
-
 ---
 layout: section
 ---
@@ -640,13 +556,6 @@ layout: section
 7. Repérer le N+1 dans votre code, et le corriger
 
 </div>
-
-<!--
-⏱ +122.
-
-L'étape 7 est la plus formatrice : leur faire activer log: ["query"]
-et compter les requêtes eux-mêmes.
--->
 
 ---
 
@@ -714,14 +623,6 @@ En binôme, deux minutes trente pour montrer&nbsp;:
 Ce n’est pas noté. C’est pour se situer, et pour prendre l’habitude de défendre son code.
 </div>
 
-<!--
-🔴 20 MINUTES BUDGÉTÉES, huit binômes. Ne pas les sacrifier si la séance déborde :
-c'est ici que la règle d'or passe du contrôle individuel pendant les TP
-à une explication devant les autres.
-
-Prendre des notes pour le RETEX : qui a décroché, qui est en avance.
--->
-
 ---
 layout: center
 class: text-center
@@ -739,11 +640,3 @@ Lundi, on la verrouille, puis on lui donne enfin un visage.
 <div class="pt-10 text-sm op-60">
 Slides&nbsp;: gaetanmaisse.github.io/ismin-web-2026-tps
 </div>
-
-<!--
-⏱ AVANT DE PARTIR :
-  1. Ctrl+Shift+T → CSV de minutage
-  2. docs/RETEX-seance-03.md
-  3. ./publier-tp.sh corrige 03
-  4. Préparer le sprint 2 pendant la semaine
--->

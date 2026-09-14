@@ -803,11 +803,9 @@ layout: section
 
 # 2. TypeScript
 
-<div class="op-75 pt-2">Le langage du semestre</div>
-
 ---
 
-# Le paysage
+# L'écosysteme
 
 <div class="grid grid-cols-3 gap-4 pt-6">
 
@@ -836,7 +834,6 @@ layout: section
 <div class="pt-10 text-center">
 
 **Le même langage sur le serveur et dans le navigateur.**
-C’est ce qui rend possible un cours full-stack en quatre semaines.
 
 </div>
 
@@ -844,11 +841,8 @@ C’est ce qui rend possible un cours full-stack en quatre semaines.
 
 ---
 
-# À vous&nbsp;: qu’est-ce que ça affiche&nbsp;?
+# Les mauvais côtés de JavaScript 
 
-<div class="text-sm op-75 mb-2">
-Annoncez le résultat <b>avant</b> de lancer. Bouton ▶ sur chaque bloc.
-</div>
 
 <div class="grid grid-cols-2 gap-x-6 text-sm">
 <div>
@@ -947,7 +941,7 @@ puis on lui a demandé de porter des applications de millions de lignes.
 
 ---
 
-# TypeScript attrape les trois
+# TypeScript mets en évidence les trois
 
 ```ts twoslash
 // @errors: 2367 2365 2551
@@ -1032,10 +1026,6 @@ interface Dataset {
 </div>
 
 </v-clicks>
-
-<div class="pt-3 text-sm op-75">
-C’est tout ce qu’il faut pour lire les slides qui suivent. On revient sur chaque mot-clé en détail après la pause.
-</div>
 
 <!--
 Slide de vocabulaire, 1 minute : elle sert uniquement à ce que les trois
@@ -1276,7 +1266,7 @@ Noter l'écart réel dans le RETEX.
 
 # Le piège de `var`
 
-```js
+```js {monaco-run} {autorun:false}
 function varTest() {
   var x = "Hello";
   if (true) {
@@ -1285,15 +1275,15 @@ function varTest() {
   }
   console.log(x);
 }
+
+varTest()
 ```
 
 <v-click>
 
 <div class="pt-4 p-4 bg-amber-500 bg-opacity-10 rounded">
 
-`71` … puis **`71`** à nouveau.
-
-La portée de `var` est la **fonction**, pas le bloc. Le second `x` n’est pas une nouvelle variable&nbsp;: c’est la même, écrasée.
+La portée de `var` est la **fonction**, pas le bloc.  Le second `x` n’est pas une nouvelle variable&nbsp;: c’est la même, écrasée.
 
 </div>
 
@@ -1330,8 +1320,8 @@ if (true) {
 const model = "Mistral-7B";
 model = "autre";       // ❌ erreur
 // … mais PAS la mutation
-const models = [];
-models.push(model);    // ✅ parfaitement légal
+const models = { data: [1, 2, 3]};
+models.data = [4, 5, 6];    // ✅ parfaitement légal
 
 // Les types sont le plus souvent inférés
 const org = "mistralai";     // string, inutile de l'écrire
@@ -1373,7 +1363,7 @@ symbol
 any         // à proscrire
 unknown     // le any prudent
 void        // ne renvoie rien
-never       // ne revient jamais
+never       // ne doit pas arriver
 ```
 
 <div class="text-sm op-75 pt-2">
@@ -1394,15 +1384,14 @@ data.whatever.deeply.nested;   // compile. Explose à l'exécution.
 
 // unknown : « je ne sais pas encore » : il faut vérifier avant d'utiliser
 const payload: unknown = JSON.parse(raw);
-payload.name;                   // ❌ refusé, et c'est heureux
+payload.name;                   // ❌ refusé
 ```
 
 <v-click>
 
-<div class="pt-6 p-4 bg-blue-500 bg-opacity-10 rounded">
+<div class="pt-2 p-2 bg-red-500 bg-opacity-10 rounded">
 
-Chaque `any` que vous écrivez est un morceau de code où vous renoncez au bénéfice de TypeScript.
-Dans ce cours, considérez-le comme interdit.
+Dans ce cours, `any` est interdit.
 
 </div>
 
@@ -1435,7 +1424,7 @@ Avec des **backticks**, pas des guillemets.
 </div>
 <div>
 
-### Fonctions fléchées
+### Lambda
 
 ```ts
 // Une expression : pas de return
@@ -1587,7 +1576,7 @@ Déclaration et implémentation au même endroit, et `this` toujours explicite.
 <v-click>
 
 <div class="pt-4 text-sm op-75">
-Pas de fichier d’en-tête, pas de destructeur, pas de gestion mémoire. <code>private</code> et <code>readonly</code> sont vérifiés à la compilation… et effacés à l’exécution.
+<code>private</code> et <code>readonly</code> sont vérifiés à la compilation… et effacés à l’exécution.
 </div>
 
 </v-click>
@@ -1665,7 +1654,8 @@ En JavaScript, on ne parcourt pas un tableau avec une boucle `for`&nbsp;: **on e
 </div>
 
 <div class="pt-8 text-sm op-75">
-Chacune prend une <b>fonction fléchée</b> en paramètre et l’applique à chaque élément. Aucune ne modifie le tableau d’origine&nbsp;: elles <b>renvoient un résultat neuf</b>, tableau, booléen ou chaîne selon la méthode.
+Chacune prend une <b>lambda</b> en paramètre et l’applique à chaque élément. Aucune ne modifie le tableau d’origine&nbsp;:
+elles <b>renvoient un nouveau objet:</b> tableau, booléen ou chaîne selon la méthode.
 </div>
 
 <!--

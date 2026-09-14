@@ -325,7 +325,7 @@ npx prisma generate
 
 # 3. Inspecter la DB
 npx prisma studio
-#    → une interface web sur localhost:5555
+#    → une interface web sur localhost:5555 
 ```
 
 <v-click>

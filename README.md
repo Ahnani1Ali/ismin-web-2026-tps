@@ -16,7 +16,7 @@ git clone https://github.com/VOTRE-PSEUDO/ismin-web-2026-tps.git
 cd ismin-web-2026-tps
 ```
 
-Les TPs sont publiés **au fil des séances**. À partir de la séance 2, vous déclarez le dépôt du cours comme `upstream`, une fois, puis vous récupérez le TP du jour :
+Les TP sont publiés **au fil des séances**. À partir de la séance 2, vous déclarez le dépôt du cours comme `upstream`, une fois, puis vous récupérez le TP du jour :
 
 ```sh
 git remote add upstream https://github.com/gaetanmaisse/ismin-web-2026-tps.git

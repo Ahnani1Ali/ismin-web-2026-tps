@@ -805,7 +805,7 @@ layout: section
 
 ---
 
-# L'écosysteme
+# L’écosystème
 
 <div class="grid grid-cols-3 gap-4 pt-6">
 
@@ -841,7 +841,7 @@ layout: section
 
 ---
 
-# Les mauvais côtés de JavaScript 
+# Les mauvais côtés de JavaScript
 
 
 <div class="grid grid-cols-2 gap-x-6 text-sm">
@@ -941,7 +941,7 @@ puis on lui a demandé de porter des applications de millions de lignes.
 
 ---
 
-# TypeScript mets en évidence les trois
+# TypeScript met en évidence les trois
 
 ```ts twoslash
 // @errors: 2367 2365 2551
@@ -1655,7 +1655,7 @@ En JavaScript, on ne parcourt pas un tableau avec une boucle `for`&nbsp;: **on e
 
 <div class="pt-8 text-sm op-75">
 Chacune prend une <b>lambda</b> en paramètre et l’applique à chaque élément. Aucune ne modifie le tableau d’origine&nbsp;:
-elles <b>renvoient un nouveau objet:</b> tableau, booléen ou chaîne selon la méthode.
+elles <b>renvoient un nouvel objet&nbsp;:</b> tableau, booléen ou chaîne selon la méthode.
 </div>
 
 <!--

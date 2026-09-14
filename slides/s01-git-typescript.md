@@ -208,16 +208,16 @@ et une classe TypeScript qui fait passer onze tests.
 
 ---
 
-# Les TP démarrent en randori
+# Les TP en mode randori
 
 <div class="text-sm op-75 mb-4">
-Un kata à plusieurs, emprunté aux dojos de code&nbsp;: un seul clavier, et toute la salle qui réfléchit.
+Fonctionnement emprunté aux dojos de code&nbsp;: un seul clavier, et toute la salle qui réfléchit.
 </div>
 
 <div class="grid grid-cols-2 gap-8">
 <div>
 
-### Au vidéoprojecteur
+### Sur mon PC
 
 - **Un pilote** au clavier&nbsp;: il tape, il ne décide pas
 - **Un copilote** à côté&nbsp;: il pense à voix haute, il dicte
@@ -228,9 +228,8 @@ Un kata à plusieurs, emprunté aux dojos de code&nbsp;: un seul clavier, et tou
 
 ### Dans la salle
 
-- On regarde, on prend des notes, on **se tait**
-- On parle quand le binôme sèche, pas avant
-- Moi, je n’ai pas de clavier&nbsp;: je pose des questions
+- On fait son TP en parallèle
+- On parle quand le binôme sèche
 
 </div>
 </div>

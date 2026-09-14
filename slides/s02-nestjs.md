@@ -493,11 +493,6 @@ flowchart LR
   style M fill:#eff6ff,stroke:#2563eb,stroke-width:3px
 ```
 
-<div class="pt-4">
-
-Cinq pièces, **une par une**, dans l’ordre où on les écrit. Le DTO, la forme attendue d’une entrée, viendra en section 6.
-
-</div>
 
 <!--
 🔴 Ce schéma revient en pleine page avant chaque pièce, celle du moment
@@ -1033,9 +1028,10 @@ layout: section
 Étape 0 : ceux qui n'ont pas fini le TP1 gardent les deux fichiers fournis,
 identiques au corrigé publié hier soir. Les autres écrasent avec les leurs.
 
-Amorçage en Randori (8 min) : lire le projet ensemble, écrire findAll
-dans le service (une délégation au zoo) puis la route dans le contrôleur.
-Puis ils continuent seuls.
+Amorçage en Randori (8 min) : lire le projet ensemble, câbler le module,
+poser le ModelZoo dans le service puis écrire clear, create et findAll,
+trois délégations, puis la route dans le contrôleur. Puis ils continuent
+seuls.
 
 Blocages classiques :
 - module pas câblé : la suite de tests ne démarre pas, « Nest could not
@@ -1242,8 +1238,6 @@ layout: section
 ---
 
 # 5. Le cycle de vie
-
-<div class="op-75 pt-2">Le bon moment pour charger</div>
 
 ---
 
